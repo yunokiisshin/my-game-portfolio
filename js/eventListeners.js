@@ -64,5 +64,3 @@ startGameButton.addEventListener('click', () => {
 instructionsButton.addEventListener('click', () => {
   alert('Add your game instructions here')
 });
-
-

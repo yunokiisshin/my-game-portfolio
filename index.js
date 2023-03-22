@@ -14,13 +14,13 @@ const player = new Player({
   animations: {
     idleRight: {
       frameRate: 11,
-      frameBuffer: 2,
+      frameBuffer: 5,
       loop: true,
       imageSrc: './resource/img/king/idle.png',
     },
     idleLeft: {
       frameRate: 11,
-      frameBuffer: 2,
+      frameBuffer: 5,
       loop: true,
       imageSrc: './resource/img/king/idleLeft.png',
     },
@@ -240,4 +240,3 @@ function playBackgroundMusic() {
   backgroundMusic.volume = 0.5; // Set the desired volume (0 to 1)
   backgroundMusic.play();
 }
-
