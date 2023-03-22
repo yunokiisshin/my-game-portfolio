@@ -7,6 +7,7 @@
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    cursor: url('./resource/img/cursors/general_cursor.png'), auto;
   }
   @font-face {
     font-family: 'upheaval';
@@ -17,8 +18,8 @@
   
   canvas {
     display: block;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 75%;
+    max-height: 75%;
     object-fit: contain;
   }
 
@@ -52,12 +53,25 @@
     font-size: 24px;
     font-family: 'upheaval', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 2px;
-    margin: 4px 2px;
+    margin: 3% 3%;
     cursor: pointer;
-    padding: 20px 40px;
+    padding: 3% 6%;
   }
   button:hover {
     background-color: #f5503a;
+  }
+    /* Medium devices (tablets, less than 768px) */
+  @media (max-width: 767px) {
+    button {
+      font-size: 18px;
+    }
+  }
+
+  /* Small devices (landscape phones, less than 576px) */
+  @media (max-width: 575px) {
+    button {
+      font-size: 14px;
+    }
   }
 
 </style>
