@@ -27,10 +27,12 @@ window.addEventListener('keydown', (event) => {
     case 'ArrowLeft':
       // move player to the left
       keys.ArrowLeft.pressed = true
+      playWalkSound()
       break
     case 'ArrowRight':
       // move player to the right
       keys.ArrowRight.pressed = true
+      playWalkSound()
       break
   }
 })
@@ -40,27 +42,29 @@ window.addEventListener('keyup', (event) => {
     case 'ArrowLeft':
       // move player to the left
       keys.ArrowLeft.pressed = false
+      stopWalkSound()
 
       break
     case 'ArrowRight':
       // move player to the right
       keys.ArrowRight.pressed = false
+      stopWalkSound()
 
       break
   }
 })
 
 // Get the main screen overlay and buttons
-const mainScreen = document.getElementById('mainScreen');
-const startGameButton = document.getElementById('startGame');
-const instructionsButton = document.getElementById('instructions');
+const mainScreen = document.getElementById('mainScreen')
+const startGameButton = document.getElementById('startGame')
+const instructionsButton = document.getElementById('instructions')
 
 // Add click event listeners for the buttons
 startGameButton.addEventListener('click', () => {
   mainScreen.style.display = 'none'
   playBackgroundMusic()
-});
+})
 
 instructionsButton.addEventListener('click', () => {
   alert('Add your game instructions here')
-});
+})

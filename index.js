@@ -237,6 +237,20 @@ function playDoorSound() {
 //background music
 function playBackgroundMusic() {
   var backgroundMusic = document.getElementById("backgroundMusic");
-  backgroundMusic.volume = 0.5; // Set the desired volume (0 to 1)
+  backgroundMusic.volume = 0; // Set the desired volume (0 to 1)
   backgroundMusic.play();
+}
+
+//running noise
+function playWalkSound() {
+  var walkSound = document.getElementById("walkSound");
+  doorSound.currentTime = 0
+  walkSound.volume = 0.5; // Set the desired volume (0 to 1)
+  walkSound.play()
+}
+
+//stop running noise; improvable by overriding with other sounds?
+function stopWalkSound() {
+  var walkSound = document.getElementById("walkSound");
+  walkSound.pause()
 }
