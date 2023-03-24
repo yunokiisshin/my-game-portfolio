@@ -36,6 +36,12 @@ const player = new Player({
       loop: true,
       imageSrc: './resource/img/king/runLeft.png',
     },
+    runLeft: {
+      frameRate: 3,
+      frameBuffer: 4,
+      loop: false,
+      imageSrc: './resource/img/king/attack.png',
+    },
     enterDoor: {
       frameRate: 8,
       frameBuffer: 4,
@@ -61,6 +67,7 @@ const player = new Player({
     },
   },
 })
+
 
 let level = 3
 let levels = {
@@ -237,7 +244,7 @@ function playDoorSound() {
 //background music
 function playBackgroundMusic() {
   var backgroundMusic = document.getElementById("backgroundMusic");
-  backgroundMusic.volume = 0; // Set the desired volume (0 to 1)
+  backgroundMusic.volume = 0.3; // Set the desired volume (0 to 1)
   backgroundMusic.play();
 }
 
